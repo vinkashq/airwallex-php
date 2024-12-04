@@ -1,0 +1,38 @@
+{
+    "name": "vinkas/airwallex",
+    "description": "PHP SDK for Airwallex API",
+    "type": "library",
+    "require": {
+        "saloonphp/saloon": "^3.10"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vinkas\\Airwallex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinoth Kannan",
+            "email": "vinoth.kannan@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Vinkas",
+            "homepage": "https://vinkas.com"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "phpstan analyse"
+    }
+}
