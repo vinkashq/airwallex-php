@@ -10,7 +10,7 @@ class Connector extends SaloonConnector
 
     public function resolveBaseUrl(): string
     {
-        return 'https://airwallex.com/api/v1';
+        return 'https://api.airwallex.com/api/v1';
     }
 
     protected function defaultAuth(): Authenticator
