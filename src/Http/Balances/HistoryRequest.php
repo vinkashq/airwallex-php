@@ -16,11 +16,11 @@ class HistoryRequest extends Request
         $query = parent::defaultQuery();
 
         if (isset($this->from)) {
-            $query['from'] = $this->from;
+            $query['from_post_at'] = $this->from;
         }
 
         if (isset($this->to)) {
-            $query['to'] = $this->to;
+            $query['to_post_at'] = $this->to;
         }
 
         if (isset($this->page)) {
