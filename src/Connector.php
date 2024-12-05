@@ -39,4 +39,14 @@ class Connector extends SaloonConnector
     {
         $_ENV[static::TOKEN_KEY] = $token;
     }
+
+    public function getClientId(): string
+    {
+        return $_ENV['AIRWALLEX_CLIENT_ID'];
+    }
+
+    public function getApiKey(): string
+    {
+        return $_ENV['AIRWALLEX_API_KEY'];
+    }
 }

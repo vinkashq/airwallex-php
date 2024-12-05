@@ -9,8 +9,11 @@ class Authenticator implements AuthenticatorContract
 {
     public function set(PendingRequest $pendingRequest): void
     {
-        $pendingRequest->headers()->add('x-client-id', $_ENV['AIRWALLEX_CLIENT_ID']);
-        $pendingRequest->headers()->add('x-api-key', $_ENV['AIRWALLEX_API_KEY']);
+        /** @phpstan-var \Vinkas\Airwallex\Connector $connector */
+        $connector = $pendingRequest->getConnector();
+
+        $pendingRequest->headers()->add('x-client-id', $connector->getClientId());
+        $pendingRequest->headers()->add('x-api-key', $connector->getApiKey());
     }
 }
 
